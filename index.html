@@ -1,24 +1,281 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous">
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
+  <header>
+    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M18: Ciberseguridad en IA: Defensa contra Prompt Injection</strong></h1>
+    <div class="header-widgets">
+      <div class="timer-container">
+        <span id="timer">⏱️ 00:00</span>
+        <button id="startStop">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-input">
+          <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="activity-list">
+      <h2>Actividades</h2>
+      <ul>
+        <li><a href="#activity-0">📝</a></li>
+        <li><a href="#activity-1">1</a></li>
+        <li><a href="#activity-2">2</a></li>
+        <li><a href="#activity-3">3</a></li>
+        <li><a href="#activity-4">4</a></li>
+        <li><a href="#activity-5">5</a></li>
+      </ul>
+      <div class="sidebar-info">
+        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+      </div>
+    </aside>
+    <main class="content">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+      <!-- 0) De un Vistazo -->
+      <section class="activity-card" id="activity-0">
+        <h2 class="activity-title">📝 De un Vistazo: Misión M18: Ciberseguridad en IA: Defensa contra Prompt Injection</h2>
+        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
+        <div class="overview">
+          <section class="overview-block">
+            <h3>Objetivos e “I Can”</h3>
+            <ul>
+              <li>Comprender el concepto de Prompt Injection y sus implicaciones en la ciberseguridad de IA.</li>
+              <li>Diseñar e implementar guardrails para mitigar ataques de Prompt Injection en agentes de IA.</li>
+              <li>Documentar vulnerabilidades y soluciones como 'Hacker de Sombrero Blanco'.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Secuencia y tiempos</h3>
+            <ol>
+              <li>Saludo Interactivo con IA — 3 min</li>
+              <li>“I Can” + Desafío — 5–7 min</li>
+              <li>AI GYM — 10–12 min</li>
+              <li>Brain Spark — 17–20 min</li>
+              <li>GNIUS STORM — 5 min</li>
+            </ol>
+          </section>
+          <section class="overview-block">
+            <h3>Entregable del Micro-Proyecto</h3>
+            <ul>
+              <li>Un reporte de vulnerabilidad que documente 2-3 intentos de prompt injection en un agente de IA y el código o rediseño de prompt implementado como guardrail para mitigarlos.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Criterios de calidad</h3>
+            <ul>
+              <li>Identificación clara de la vulnerabilidad de Prompt Injection.</li>
+              <li>Efectividad del guardrail implementado para mitigar el ataque.</li>
+              <li>Claridad y completitud del reporte de vulnerabilidad, incluyendo ejemplos de ataques y soluciones.</li>
+              <li>Comprensión del concepto de Guardrails en la defensa de IA.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Materiales y preparación</h3>
+            <ul>
+              <li>Proyector e internet</li>
+              <li>LLM (Xolo), IDE/CLI/Notebook (para código/rediseño de prompt), Agente de IA pre-creado (Custom GPT/similar).</li>
+              <li>Agente de IA base listo para pruebas, entorno de desarrollo configurado.</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <!-- 1) Saludo Interactivo con IA -->
+      <section class="activity-card" id="activity-1">
+        <h2 class="activity-title">Saludo Interactivo con IA</h2>
+        <p class="activity-purpose">Activar a Xolo con perfil e intereses; conectar con el foco de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
+              <p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema y su valor profesional según la Columna 1.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Equipo: hoy trabajaremos en la ciberseguridad de la IA, específicamente en la defensa contra 'Prompt Injection'. Aprenderán a identificar y mitigar ataques que buscan manipular el comportamiento de un agente. Esto es crucial para diseñar agentes de IA robustos y confiables.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
+              <p class="step-instructions">Cada estudiante envía a Xolo: “Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Misión M18: Ciberseguridad en IA. Necesito foco en [marco/herramienta].”</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 2) “I Can” + Desafío -->
+      <section class="activity-card" id="activity-2">
+        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
+        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
+              <p class="step-instructions">Proyectar Diapositiva 3. Describe el reto y la meta observable, derivados de Columna 1 y 3.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El reto es actuar como 'Hacker de Sombrero Blanco' y 'Ingeniero de Seguridad'. Deberán tomar un agente de IA, intentar manipular su comportamiento mediante 'Prompt Injection', y luego diseñar e implementar 'Guardrails' para mitigar estos ataques. Evaluaremos la capacidad de identificar y mitigar ataques de Prompt Injection mediante la implementación de guardrails efectivos, y la claridad del reporte de vulnerabilidad.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
+              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” concreto alineado al entregable de Columna 2.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: "Puedo identificar y documentar intentos de Prompt Injection en un agente de IA." y "Puedo diseñar e implementar guardrails para proteger un agente de IA contra ataques de Prompt Injection."</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 3) AI GYM -->
+      <section class="activity-card" id="activity-3">
+        <h2 class="activity-title">AI GYM</h2>
+        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Marco del día</h3>
+              <p class="step-instructions">Proyectar Diapositiva 5. Introduce el marco según Columna 3 (Prompt Injection y Guardrails).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Hoy nos enfocamos en 'Prompt Injection' y 'Guardrails'. La inyección de prompts es un tipo de ataque donde se manipula el comportamiento de un modelo de IA a través de entradas maliciosas. Los 'Guardrails' son mecanismos de defensa para evitarlo. Este marco agrega valor porque la seguridad de la IA es crítica. Eviten no validar inputs y asumir confianza en el usuario. Usen la robustez de los guardrails para validar resultados.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Mini-demostración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 6. Construye ejemplo mínimo alineado a las tres columnas del input.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Observen cómo un intento simple de 'Prompt Injection' puede alterar la respuesta de un agente. Ahora, vean cómo un guardrail básico, como un filtro de palabras clave o una validación de acción, puede detener este comportamiento no deseado. Verifiquen que la respuesta del agente se mantiene dentro de los parámetros esperados.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Check rápido</h3>
+              <p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Pregunta 1: ¿Qué busca un ataque de 'Prompt Injection'? Pregunta 2: ¿Cuál es el propósito principal de un 'Guardrail' en un agente de IA?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 4) Brain Spark -->
+      <section class="activity-card" id="activity-4">
+        <h2 class="activity-title">Brain Spark</h2>
+        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Producción</h3>
+              <p class="step-instructions">Proyectar Diapositiva 8. Indica el producto específico (Columna 2) y un checklist de calidad (Columna 3). Tiempo de trabajo autónomo.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">N/A</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Iteración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 9. Pide una mejora concreta basada en criterios del marco.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Antes de cerrar: valida la efectividad del guardrail implementado para mitigar el ataque y la claridad del reporte de vulnerabilidad. Si no se cumple, añade un caso de prueba adicional para el guardrail, o refina la lógica del guardrail para cubrir un escenario más complejo de inyección.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Evidencia</h3>
+              <p class="step-instructions">Proyectar Diapositiva 10. Solicita evidencia: reporte de vulnerabilidad (documento o markdown), fragmentos de código/rediseño de prompt, capturas de pantalla de los intentos de ataque y la mitigación.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Entrega con nombre: M18_Ciberseguridad_Equipo/Nombre_Versión. Incluye el reporte de vulnerabilidad, los fragmentos de código o rediseño de prompt, y las capturas de pantalla que demuestren los intentos de ataque y la mitigación.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 5) GNIUS STORM -->
+      <section class="activity-card" id="activity-5">
+        <h2 class="activity-title">GNIUS STORM</h2>
+        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
+              <p class="step-instructions">2–3 presentaciones de 30–45 s, centradas en evidencia y criterio.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Enfoca tu presentación en la evidencia de la mitigación del ataque, y la justificación del guardrail implementado.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
+              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje, 1 criterio de mayor impacto y 1 siguiente paso fuera del aula.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Síntesis: La importancia de la ciberseguridad en IA y la necesidad de defensas proactivas. Criterio clave: La robustez de los guardrails para proteger la integridad y el comportamiento del agente. Siguiente paso aplicado: Explorar técnicas avanzadas de ofuscación de prompts o la integración de sistemas de detección de anomalías para fortalecer la defensa.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
